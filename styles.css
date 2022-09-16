@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+}
+.body {
+  font-size: 1.8rem;
+}
+
+.margin-small {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.card {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 1rem #a5a5a5;
+  max-width: 50rem;
+  overflow: hidden;
+  margin: 2rem;
+}
+
+.card-completed-true {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 1rem #a5a5a5;
+  max-width: 50rem;
+  overflow: hidden;
+  margin: 2rem;
+  background-color: rgb(134, 237, 134);
+}
+
+.card-completed-false {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 1rem #a5a5a5;
+  max-width: 50rem;
+  overflow: hidden;
+  margin: 2rem;
+  background-color: rgb(238, 139, 144);
+}
+
+.card-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  background-color: #424242;
+  padding: 0.5rem;
+}
+
+.card-title-notbg {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.card-text {
+  font-size: 1.6rem;
+}
