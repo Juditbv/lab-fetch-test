@@ -1,3 +1,9 @@
+const getTodoHtml = (todo) => {
+  return todo.completed
+    ? `<div class="card card-todo card-true"><h3 class="card-title">${todo.title}</h3><p class="card-text">${todo.completed}</p></div>`
+    : `<div class="card card-todo card-false"><h3 class="card-title">${todo.title}</h3><p class="card-text">${todo.completed}</p></div>`;
+};
+
 document.querySelector("#getPosts").addEventListener("click", getPosts);
 document.querySelector("#getTodos").addEventListener("click", getTodos);
 
@@ -29,15 +35,7 @@ function getTodos() {
     .then((res) => {
       let data = "";
       res.forEach((todo) => {
-        const bgColor = () => {
-          if (todo.completed === true) {
-            return `<div class="card card-todo card-true"><h3 class="card-title">${todo.title}</h3><p class="card-text">${todo.completed}</p></div>`;
-          } else {
-            return `<div class="card card-todo card-false"><h3 class="card-title">${todo.title}</h3><p class="card-text">${todo.completed}</p></div>`;
-          }
-        };
-
-        data += bgColor();
+        data += getTodoHtml(todo);
       });
 
       document.querySelector("#output").innerHTML = data;
