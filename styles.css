@@ -27,29 +27,11 @@
   margin: 2rem;
 }
 
-.card-completed-true {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1rem;
-  box-shadow: 1rem 1rem 1rem #a5a5a5;
-  max-width: 50rem;
-  overflow: hidden;
-  margin: 2rem;
+.card-true {
   background-color: rgb(134, 237, 134);
 }
 
-.card-completed-false {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1rem;
-  box-shadow: 1rem 1rem 1rem #a5a5a5;
-  max-width: 50rem;
-  overflow: hidden;
-  margin: 2rem;
+.card-false {
   background-color: rgb(238, 139, 144);
 }
 
@@ -60,16 +42,19 @@
   text-align: center;
   background-color: #424242;
   padding: 0.5rem;
+  width: 100%;
 }
 
-.card-title-notbg {
-  font-size: 2.4rem;
-  font-weight: 600;
-  color: white;
-  text-align: center;
-  padding: 0.5rem;
+.card-todo .card-title {
+  background-color: transparent;
 }
 
 .card-text {
   font-size: 1.6rem;
+  padding: 1rem;
+}
+
+.text-small {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
 }

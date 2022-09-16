@@ -29,23 +29,15 @@ function getTodos() {
     .then((res) => {
       let data = "";
       res.forEach((todo) => {
-        todo.completed === true
-          ? (data += `
-        <div class="card-completed-true">
-            <h3 class="card-title-notbg>${todo.title}</h3>
-            <p class="card-text">
-                ${todo.completed}
-            </p>
-        </div>
-        `)
-          : (data += `
-        <div class="card-completed-false">
-            <h3 class="card-title-notbg">${todo.title}</h3>
-            <p class="card-text">
-                ${todo.completed}
-            </p>
-        </div>
-        `);
+        const bgColor = () => {
+          if (todo.completed === true) {
+            return `<div class="card card-todo card-true"><h3 class="card-title">${todo.title}</h3><p class="card-text">${todo.completed}</p></div>`;
+          } else {
+            return `<div class="card card-todo card-false"><h3 class="card-title">${todo.title}</h3><p class="card-text">${todo.completed}</p></div>`;
+          }
+        };
+
+        data += bgColor();
       });
 
       document.querySelector("#output").innerHTML = data;
